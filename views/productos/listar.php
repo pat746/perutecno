@@ -45,7 +45,15 @@
           </tbody>
         </table>
       </div> <!-- ./card-body -->
-    </div> <!-- ./card -->
+    </div> <!-- ./card --> 
+    <!-- Botón volver -->
+    <div class="text-center mt-4">
+      <?php $baseURL = "/tecnoperu"; ?>
+      <a href="<?= $baseURL ?>/index.html" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Volver al Dashboard
+      </a>
+    </div>
+
   </div> <!-- ./container -->
 
   <script>

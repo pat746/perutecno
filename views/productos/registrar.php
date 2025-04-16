@@ -74,7 +74,12 @@
         </div>
       </div> <!-- ./card -->
     </form>
-
+    <!-- Botón volver -->
+    <div class="text-center mt-4">
+     <a href="/tecnoperu/index.html" class="btn btn-secondary">
+      <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+    </a>
+    </div>
 
   </div> <!-- ./container -->
   
@@ -103,9 +108,17 @@
         })
       })
         .then(response => { return response.json() })
-        .then(data => { console.log(data) })
+        .then(data => {
+          if (data.rows > 0) {
+            alert("Producto registrado correctamente.");
+            formulario.reset(); // o location.reload();
+          } else {
+            alert("No se pudo registrar el producto.");
+          }
+        })
+
         .catch(error => { console.error(error) });
-    }
+     }
 
     formulario.addEventListener("submit", function (e) {
       e.preventDefault();
